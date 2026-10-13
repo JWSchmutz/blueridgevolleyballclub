@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caitlin | Blue Ridge Volleyball Club</title>
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-content">
+        <a class="site-logo" href="./index.html" aria-label="Blue Ridge Volleyball Club home">
+          <img src="./logo.png" alt="Blue Ridge Volleyball Club" />
+        </a>
+        <div class="site-navigation">
+          <button class="site-navigation-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <nav id="main-navigation" aria-label="Main navigation">
+            <a href="./index.html">Home</a><a href="./about.html">About</a><a href="./coaches.html" aria-current="page">Coaches</a><a href="./contact.html">Contact</a><a href="./sponsors.html">Our Sponsors</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="coach-profile">
+      <img src="./caitlin.jpg" alt="Caitlin" />
+      <div>
+        <p class="home-welcome-eyebrow">Blue Ridge Volleyball Club Coach</p>
+        <h1>Caitlin</h1>
+        <a href="./coaches.html">Back to all coaches</a>
+      </div>
+    </main>
+    <footer class="site-footer"><p>&copy; 2026 Blue Ridge Volleyball Club</p></footer>
+    <script>
+      const navigationToggle = document.querySelector(".site-navigation-toggle");
+      const navigation = document.querySelector("#main-navigation");
+      navigationToggle.addEventListener("click", () => {
+        const isExpanded = navigationToggle.getAttribute("aria-expanded") === "true";
+        navigationToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Ridge Volleyball Club</title>
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-content">
+        <a
+          class="site-logo"
+          href="./index.html"
+          aria-label="Blue Ridge Volleyball Club home"
+        >
+          <img src="./logo.png" alt="Blue Ridge Volleyball Club" />
+        </a>
+        <div class="site-navigation">
+          <button
+            class="site-navigation-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav id="main-navigation" aria-label="Main navigation">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./coaches.html" aria-current="page">Coaches</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./sponsors.html">Our Sponsors</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="coaches-page">
+      <section class="coaches-intro">
+        <p class="home-welcome-eyebrow">Blue Ridge Volleyball Club</p>
+        <h1>Meet Our Coaches</h1>
+        <p>Learn from a team that is passionate about helping athletes grow.</p>
+      </section>
+      <section class="coach-grid" aria-label="Coaching staff">
+        <a class="coach-card" href="./cade.html" aria-label="Meet Cade">
+          <img class="coach-card-background" src="./brv-bg-coach.jpg" alt="" />
+          <img class="coach-card-logo" src="./brv-bg-coach.png" alt="" />
+          <img class="coach-card-portrait" src="./cade.jpg" alt="Cade" />
+          <div class="coach-card-caption">
+            <h2>Cade</h2>
+            <p>Coaching Resource</p>
+          </div>
+        </a>
+        <a class="coach-card" href="./caitlin.html" aria-label="Meet Caitlin">
+          <img class="coach-card-background" src="./brv-bg-coach.jpg" alt="" />
+          <img class="coach-card-logo" src="./brv-bg-coach.png" alt="" />
+          <img class="coach-card-portrait" src="./caitlin.jpg" alt="Caitlin" />
+          <div class="coach-card-caption">
+            <h2>Caitlin</h2>
+            <p>Assistant Coach</p>
+          </div>
+        </a>
+        <a class="coach-card" href="./callie.html" aria-label="Meet Callie">
+          <img class="coach-card-background" src="./brv-bg-coach.jpg" alt="" />
+          <img class="coach-card-logo" src="./brv-bg-coach.png" alt="" />
+          <img class="coach-card-portrait" src="./callie.jpg" alt="Callie" />
+          <div class="coach-card-caption">
+            <h2>Callie</h2>
+            <p>Head Coach</p>
+          </div>
+        </a>
+        <a class="coach-card" href="./cora.html" aria-label="Meet Cora">
+          <img class="coach-card-background" src="./brv-bg-coach.jpg" alt="" />
+          <img class="coach-card-logo" src="./brv-bg-coach.png" alt="" />
+          <img class="coach-card-portrait" src="./cora.jpg" alt="Cora" />
+          <div class="coach-card-caption">
+            <h2>Cora</h2>
+            <p>Head Coach</p>
+          </div>
+        </a>
+        <a class="coach-card" href="./jeremiah.html" aria-label="Meet Jeremiah">
+          <img class="coach-card-background" src="./brv-bg-coach.jpg" alt="" />
+          <img class="coach-card-logo" src="./brv-bg-coach.png" alt="" />
+          <img
+            class="coach-card-portrait"
+            src="./Jeremiah.jpg"
+            alt="Jeremiah"
+          />
+          <div class="coach-card-caption">
+            <h2>Jeremiah</h2>
+            <p>Head Coach</p>
+          </div>
+        </a>
+        <a class="coach-card" href="./mike.html" aria-label="Meet Mike">
+          <img class="coach-card-background" src="./brv-bg-coach.jpg" alt="" />
+          <img class="coach-card-logo" src="./brv-bg-coach.png" alt="" />
+          <img class="coach-card-portrait" src="./mike.jpg" alt="Mike" />
+          <div class="coach-card-caption">
+            <h2>Mike</h2>
+            <p>Director</p>
+          </div>
+        </a>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Blue Ridge Volleyball Club</p>
+    </footer>
+    <script>
+      const navigationToggle = document.querySelector(
+        ".site-navigation-toggle",
+      );
+      const navigation = document.querySelector("#main-navigation");
+
+      navigationToggle.addEventListener("click", () => {
+        const isExpanded =
+          navigationToggle.getAttribute("aria-expanded") === "true";
+
+        navigationToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+    </script>
+  </body>
+</html>

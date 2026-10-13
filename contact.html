@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Ridge Volleyball Club</title>
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-content">
+        <a
+          class="site-logo"
+          href="/"
+          aria-label="Blue Ridge Volleyball Club home"
+        >
+          <img src="./logo.png" alt="Blue Ridge Volleyball Club" />
+        </a>
+        <div class="site-navigation">
+          <button
+            class="site-navigation-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav id="main-navigation" aria-label="Main navigation">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./coaches.html">Coaches</a>
+            <a href="./contact.html" aria-current="page">Contact</a>
+            <a href="./sponsors.html">Our Sponsors</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="contact-page">
+      <section class="contact-intro">
+        <p class="home-welcome-eyebrow">Get in touch</p>
+        <h1>Contact Blue Ridge Volleyball Club</h1>
+      </section>
+      <div class="contact-grid">
+        <section class="contact-card">
+          <h2>Located at</h2>
+          <address>
+            315 Holland Ave<br />
+            Seneca, SC
+          </address>
+          <a
+            class="directions-link"
+            href="https://www.google.com/maps/dir/?api=1&destination=315+Holland+Ave%2C+Seneca%2C+SC"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get directions to the gym
+          </a>
+        </section>
+        <section class="contact-card">
+          <h2>Call or email</h2>
+          <p>
+            <strong>Tel:</strong>
+            <a href="tel:+18649861887">864-986-1887</a>
+          </p>
+          <p><strong>Contact:</strong> Mike Venneri</p>
+          <p>
+            <a href="mailto:Mvenneri41@gmail.com">Mvenneri41@gmail.com</a>
+          </p>
+          <p>
+            <a href="mailto:blueridgevbc@gmail.com">blueridgevbc@gmail.com</a>
+          </p>
+        </section>
+        <section class="contact-card contact-social">
+          <h2>Follow us</h2>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/blueridgevolleyballclub"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.6v2h-2.9v3.2h2.9V21h3.7Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/blueridgevbc"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect
+                  x="3.5"
+                  y="3.5"
+                  width="17"
+                  height="17"
+                  rx="5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle cx="17.7" cy="6.5" r="1.2" fill="currentColor" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCk1__SsjRYIWlD2rtROhulA"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Blue Ridge Volleyball Club</p>
+    </footer>
+    <script>
+      const navigationToggle = document.querySelector(
+        ".site-navigation-toggle",
+      );
+      const navigation = document.querySelector("#main-navigation");
+
+      navigationToggle.addEventListener("click", () => {
+        const isExpanded =
+          navigationToggle.getAttribute("aria-expanded") === "true";
+
+        navigationToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+    </script>
+  </body>
+</html>

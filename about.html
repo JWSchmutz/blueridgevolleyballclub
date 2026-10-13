@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Ridge Volleyball Club</title>
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-content">
+        <a
+          class="site-logo"
+          href="./index.html"
+          aria-label="Blue Ridge Volleyball Club home"
+        >
+          <img src="./logo.png" alt="Blue Ridge Volleyball Club" />
+        </a>
+        <div class="site-navigation">
+          <button
+            class="site-navigation-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav id="main-navigation" aria-label="Main navigation">
+            <a href="./index.html">Home</a>
+            <a href="./about.html" aria-current="page">About</a>
+            <a href="./coaches.html">Coaches</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./sponsors.html">Our Sponsors</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="about-page">
+      <section class="about-welcome">
+        <p class="home-welcome-eyebrow">Blue Ridge Volleyball Club</p>
+        <h1>Welcome to Blue Ridge Volleyball Club</h1>
+        <p class="home-welcome-tagline">Learn, Experience, Grow</p>
+      </section>
+      <div class="about-content">
+        <section class="about-section">
+          <h2>Train With the Best!</h2>
+          <p>
+            Blue Ridge Volleyball Club is a competitive volleyball club with a
+            mission to provide athletes with high-level technical and tactical
+            skills in a positive learning environment that fosters personal
+            growth and a passion for the game of volleyball. We offer varying
+            levels of training, from beginner to advanced, and provide local
+            clinics, summer camps, lessons, and travel teams. We have players
+            come in at different levels and progress at different times, so our
+            focus is for our athletes to develop confidence, discipline, and a
+            sense of pride in having done their best to achieve individual and
+            team goals. Blue Ridge Volleyball Club commits itself to preparing
+            players to excel at the next level and to exemplify the utmost in
+            character and competitive spirit on and off the court.
+          </p>
+        </section>
+        <section class="about-gallery" aria-label="Blue Ridge Volleyball Club">
+          <img
+            src="./about1.jpg"
+            alt="Blue Ridge Volleyball Club athletes"
+            loading="lazy"
+          />
+          <img
+            src="./about2.png"
+            alt="Blue Ridge Volleyball Club athletes"
+            loading="lazy"
+          />
+        </section>
+        <blockquote class="about-quote">
+          <p>
+            “Somewhere behind the athlete you’ve become and the hours of
+            practice and the coaches who have pushed you is a little girl who
+            fell in love with the game and never looked back… play for her.”
+          </p>
+          <cite>— Mia Ham</cite>
+        </blockquote>
+        <section class="about-section">
+          <h2>Our Vision</h2>
+          <p>
+            Blue Ridge Volleyball is a nonprofit Volleyball Club in the Upstate
+            of South Carolina. Located in Seneca, we strive to help athletes
+            develop their volleyball skills on the court. We hold a Christian
+            based atmosphere that encourages our youth to be better individuals
+            in the gym and out in the community.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Blue Ridge Volleyball Club</p>
+    </footer>
+    <script>
+      const navigationToggle = document.querySelector(
+        ".site-navigation-toggle",
+      );
+      const navigation = document.querySelector("#main-navigation");
+
+      navigationToggle.addEventListener("click", () => {
+        const isExpanded =
+          navigationToggle.getAttribute("aria-expanded") === "true";
+
+        navigationToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+    </script>
+  </body>
+</html>

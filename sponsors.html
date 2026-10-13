@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Ridge Volleyball Club</title>
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-content">
+        <a
+          class="site-logo"
+          href="./index.html"
+          aria-label="Blue Ridge Volleyball Club home"
+        >
+          <img src="./logo.png" alt="Blue Ridge Volleyball Club" />
+        </a>
+        <div class="site-navigation">
+          <button
+            class="site-navigation-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav id="main-navigation" aria-label="Main navigation">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./coaches.html">Coaches</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./sponsors.html" aria-current="page">Our Sponsors</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="sponsors-page">
+      <section class="sponsors-intro">
+        <p class="home-welcome-eyebrow">Blue Ridge Volleyball Club</p>
+        <h1>Sponsors Help Make the Difference</h1>
+        <p>
+          We would like to THANK all of our sponsors! Without your support this
+          couldn't be possible for so many of these amazing young athletes.
+        </p>
+      </section>
+      <section class="sponsors-list-section">
+        <h2>2025-2026 Sponsors</h2>
+        <ul class="sponsors-list">
+          <li>ADLOG LANDSCAPING</li>
+          <li>Foothills Pest Control</li>
+          <li>Sandifer Funeral Home</li>
+          <li>ABL AIR, INC</li>
+          <li>Black's Tire INC</li>
+          <li>A+ Shift</li>
+          <li>David's Heating and Air</li>
+          <li>CNP Consulting</li>
+          <li>Mountain Mocha</li>
+          <li>Taco N Madre Grill LLC</li>
+          <li>Tommy Blankenship for Sheriff</li>
+          <li>Land Beside the Water Keller Williams Oconee</li>
+          <li>Good Shephard Pet Services, Inc</li>
+          <li>Christ Fellowship Church of Toccoa Inc.</li>
+          <li>Rescue Training Specialties</li>
+          <li>Keowee Creative Marketing</li>
+          <li>Paws Diner</li>
+          <li>Joe's NY Pizza</li>
+          <li>Tisha Murphy- Allen Tate</li>
+          <li>Integrity Builders of Oconee</li>
+          <li>Baumgarner Builders</li>
+          <li>Watered Roots Wellness Center</li>
+          <li>Upstate Orthodontics, Inc</li>
+          <li>JW MARTIN REAL ESTATE, LLC</li>
+          <li>THE CASON GROUP, KELLER WILLIAMS KEOWEE NORTH</li>
+          <li>KIM SULLIVAN INSURANCE AGENCY</li>
+          <li>ABSOLUTE LAW FIRM, LLC</li>
+          <li>Southern Home Center, LLC</li>
+          <li>Oconee Farm Bureau</li>
+          <li>GBS Lumber Six Mile</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Blue Ridge Volleyball Club</p>
+    </footer>
+    <script>
+      const navigationToggle = document.querySelector(
+        ".site-navigation-toggle",
+      );
+      const navigation = document.querySelector("#main-navigation");
+
+      navigationToggle.addEventListener("click", () => {
+        const isExpanded =
+          navigationToggle.getAttribute("aria-expanded") === "true";
+
+        navigationToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+    </script>
+  </body>
+</html>

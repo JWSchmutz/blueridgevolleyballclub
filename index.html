@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Ridge Volleyball Club</title>
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-content">
+        <a
+          class="site-logo"
+          href="./index.html"
+          aria-label="Blue Ridge Volleyball Club home"
+        >
+          <img src="./logo.png" alt="Blue Ridge Volleyball Club" />
+        </a>
+        <div class="site-navigation">
+          <button
+            class="site-navigation-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav id="main-navigation" aria-label="Main navigation">
+            <a href="./index.html" aria-current="page">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./coaches.html">Coaches</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./sponsors.html">Our Sponsors</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="home-welcome">
+        <p class="home-welcome-eyebrow">Blue Ridge Volleyball Club</p>
+        <h1>Welcome to Blue Ridge Volleyball Club</h1>
+        <p class="home-welcome-tagline">Learn, Experience, Grow</p>
+      </section>
+      <section class="home-resources" aria-label="Events and quick links">
+        <article class="home-resource-card upcoming-events">
+          <p class="home-welcome-eyebrow">Save the date</p>
+          <h2>Upcoming Events</h2>
+          <h3>2026-2027 Season Tryouts</h3>
+          <a
+            class="resource-primary-link"
+            href="https://forms.gle/e9qiGtWNJixJQTn16"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sign Up Here
+          </a>
+        </article>
+        <article class="home-resource-card">
+          <h2>Quick Links</h2>
+          <div class="quick-links">
+            <a
+              href="https://storage.googleapis.com/wzukusers/user-34929493/documents/86f9af88b39f40c18eeb384454dcb940/BRVC%20Pricing%20Flyer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pricing
+            </a>
+            <a
+              href="https://storage.googleapis.com/wzukusers/user-34929493/documents/8d8650218fff41c7b79d0b122c4cc6fe/Athlete%20Sponsorship%20form%20BRVC%2026-27.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sponsorship
+            </a>
+            <a
+              href="https://storage.googleapis.com/wzukusers/user-34929493/documents/900fca6565194ebb8289c731d1259e1b/Blue%20Ridge%20Volleyball%20Team%20Flyer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Teams
+            </a>
+            <a
+              href="https://storage.googleapis.com/wzukusers/user-34929493/documents/8d1b4ede70f145298d99f34d40155845/Frequently%20Asked%20Questions%20BRVC.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Frequently Asked Questions
+            </a>
+          </div>
+        </article>
+      </section>
+      <section class="home-hero" aria-label="Blue Ridge Volleyball Club">
+        <img
+          src="./banner.png"
+          alt="Blue Ridge Volleyball Club players and coach"
+        />
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        Gym: 315 Holland Ave Seneca, SC 29678<br />
+
+        (864)-986-1887
+      </p>
+    </footer>
+    <script>
+      const navigationToggle = document.querySelector(
+        ".site-navigation-toggle",
+      );
+      const navigation = document.querySelector("#main-navigation");
+
+      navigationToggle.addEventListener("click", () => {
+        const isExpanded =
+          navigationToggle.getAttribute("aria-expanded") === "true";
+
+        navigationToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+    </script>
+  </body>
+</html>
